@@ -55,7 +55,8 @@ plugin.generateRegexes = function (settings) {
 		settings.keywords.forEach((keyword) => {
 			if (keyword && keyword.name) {
 				const escaped = utils.escapeRegexChars(keyword.name);
-				keyword.nameRegex = new RegExp(`\\b(${escaped})\\b(?=[^>]*<)`, options);
+				//keyword.nameRegex = new RegExp(`\\b(${escaped})\\b(?=[^>]*<)`, options);
+				keyword.nameRegex = new RegExp(String.raw`(?<!\p{L}\p{M}*|[\p{N}_])${escaped}(?![\p{L}\p{N}_])`, options);
 			}
 		});
 	}
