@@ -1,6 +1,6 @@
 {
 	"id": "nodebb-plugin-glossary",
-	"url": "https://github.com/NodeBB/nodebb-plugin-glossary",
+	"url": "https://github.com/idX401/nodebb-plugin-glossary",
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
