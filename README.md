@@ -4,7 +4,7 @@ This plugin allows defining keywords and descriptions in the admin control panel
 
 ## Installation
 
-    npm install nodebb-plugin-glossary
+    npm install git+https://github.com/idX401/nodebb-plugin-glossary.git
 
 ## Screenshots
 #### Admin Page
