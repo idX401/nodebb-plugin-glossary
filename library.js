@@ -75,10 +75,18 @@ plugin.parsePost = function (postData, settings) {
 		if (settings.icon) {
 			iconHtml = ` <i class="fa ${settings.icon} fa-sm text-muted"></i>`;
 		}
+		/*
 		settings.keywords.forEach((keyword) => {
 			postData.content = postData.content.replace(
 				keyword.nameRegex,
 				(match, p1) => `<span class="glossary-wrapper" title="${keyword.description}" data-bs-toggle="tooltip" data-bs-placement="top"><span class="glossary-word">${p1}</span>${iconHtml}</span>`,
+			);
+		});
+  		*/
+		settings.keywords.forEach((keyword) => {
+			postData.content = postData.content.replace(
+				keyword.nameRegex,
+				(match, p1) => `<span class="glossary-wrapper" title="${keyword.description}" data-bs-toggle="tooltip" data-bs-placement="top"><span class="glossary-word">${match}</span>${iconHtml}</span>`,
 			);
 		});
 	}
